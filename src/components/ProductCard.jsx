@@ -3,21 +3,28 @@ import { data } from "./data";
 import Counter from "./Counter";
 
 const ProductCard = () => {
-  console.log(data);
+  
+  const [image, setImage] = React.useState(data.images[0].src);
+
+  const handleImageChange = (e) => {
+    setImage(e.target.src);
+  }
+
   return (
     <div className="flex max-w-5xl m-auto my-8 justify-between items-center">
       <div className="image-section max-w-[445px]">
         <div className="main-image rounded">
-          <img src={data.images[0].src} alt="main" className="rounded" />
+          <img src={image} alt="main" className="rounded" />
         </div>
         <div className="thumbnails  flex justify-between mt-[32px]">
-          {data.images.map((item) => {
+          {data.images.map((item,) => {
             return (
               <img
                 src={item.src}
                 alt={item.alt}
                 key={item.id}
-                className="w-[88px] h-[88px] rounded"
+                onClick={(e) => handleImageChange(e)}
+                className="w-[88px] h-[88px] rounded hover:opacity-70 cursor-pointer"
               />
             );
           })}
@@ -46,7 +53,7 @@ const ProductCard = () => {
             <Counter />
           </div>
           <div className="add-to-cart">
-            <button className="bg-[orange] text-[#FFFFFF] text-[14px] font-medium w-[260px] h-[50px] rounded">
+            <button className="bg-[orange] text-[#FFFFFF] text-[14px] font-medium w-[260px] h-[50px] rounded hover:bg-[darkorange]">
               Add to cart
             </button>
           </div>
