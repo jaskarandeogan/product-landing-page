@@ -45,8 +45,8 @@ const ProductCard = () => {
           </p>
         </div>
         <div className="price my-[12px]">
-          <p className="text-[#000000] text-[32px] font-bold">{data.price}</p>
-          <p className="text-[gray] line-through">{data.totalPrice}</p>
+          <p className="text-[#000000] text-[32px] font-bold">${data.price} <span className="text-[orange] bg-[lightorange] p-2 text-[16px]">-{(data.price*100)/data.totalPrice}%</span></p>
+          <p className="text-[gray] line-through">${data.totalPrice}</p>
         </div>
         <div className="add-cart flex justify-between items-center">
           <div className="counter bg-[#F6F8FD]">
