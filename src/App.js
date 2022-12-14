@@ -1,11 +1,14 @@
 import Header from "./components/Header";
-import ProductCard from "./components/ProductCard";
+import ProductPage from "./components/ProductPage";
+import { CartContextProvider } from "./components/context/CartContext";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <ProductCard />
+      <CartContextProvider>
+        <Header />
+        <ProductPage />
+      </CartContextProvider>
     </div>
   );
 }

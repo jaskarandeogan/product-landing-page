@@ -21,9 +21,10 @@ export const data = {
             alt: 'D',
         }
     ],
-    company : " SNEAKER COMPANY",
+    productId : "001",
+    company : "SNEAKER COMPANY",
     slogan : "Fall Limited Edition Sneakers",
     description : "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.",
-    price : "$125.00",
-    totalPrice : "$250.00",
+    price : 125.00,
+    totalPrice : 250.00,
 }

@@ -1,6 +1,9 @@
+import React from "react";
 import logo from "./../assets/svg/sneakers.svg";
-import cart from "./../assets/icons/Shape.svg";
 import profile from "./../assets/profile.JPG";
+import Dropdowns from "./shared/Dropdowns";
+import { ShoppingCartIcon } from "@heroicons/react/24/outline";
+import CartView from "./shared/CartView";
 
 const Header = () => {
   const nav = [
@@ -31,8 +34,12 @@ const Header = () => {
     },
   ];
 
+  // const handleAddCart = () => {
+  //   console.log("add to cart");
+  // };
+
   return (
-    <header className="Header  max-w-6xl mx-auto flex justify-between m-4 items-center border-b-[1px] pb-2">
+    <header className=" hidden md:flex max-w-6xl mx-auto  justify-between m-4 items-center border-b-[1px] pb-2">
       <div className="log-nav flex gap-6 items-center">
         <div className="logo ">
           <img src={logo} alt="logo" />
@@ -52,8 +59,10 @@ const Header = () => {
         </nav>
       </div>
       <div className="cart-section flex items-center gap-5 border-radius-">
-        <div className="cart">
-          <img src={cart} alt="cart" />
+        <div className="cart cursor-pointer">
+          <Dropdowns Icon={ShoppingCartIcon} >
+            <CartView />
+          </Dropdowns>
         </div>
         <div className="profile w-10 h-auto rounded-full">
           <img src={profile} alt="profile" className="rounded-full" />
