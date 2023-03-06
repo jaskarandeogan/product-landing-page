@@ -1,3 +1,6 @@
+# About
+Ecommerce is a proof of concept which is to show a landing page of a product and having ability to play around possible actions like cart management, product view, delete cart items...
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
